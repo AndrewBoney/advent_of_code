@@ -17,7 +17,7 @@ import requests
 # 6) Grab the value for session. Fill it in.
 SESSION = os.getenv("session")
 
-useragent = 'https://github.com/jonathanpaulson/AdventOfCode/blob/master/get_input.py by jonathanpaulson@gmail.com'
+useragent = 'https://github.com/AndrewBoney/advent_of_code_2024/blob/master/get_input.py by andrew.boney@hotmail.co.uk'
 parser = argparse.ArgumentParser(description='Read input')
 parser.add_argument('--year', type=int, default=2022)
 parser.add_argument('--day', type=int, default=1)
