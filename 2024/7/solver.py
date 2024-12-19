@@ -30,3 +30,36 @@ for line in data:
 pt1 = sum(correct)
 
 print("pt1:", pt1)
+
+# too lazy to functionise
+correct = []
+for line in data:
+    split = line.split(":")
+
+    assert len(split) == 2
+    
+    total = int(split[0])
+    values = [int(i) for i in split[1].strip().split(" ")]
+
+    left, right = [values[0]], values[1:]
+    
+    totals = left
+    for i in range(len(right)):
+        new_totals = []
+        for out in totals:
+            add_ = out + right[i]
+            sum_ = out * right[i]
+            concat_ = int(str(out) + str(right[i]))
+
+            new_totals.append(add_)
+            new_totals.append(sum_)
+            new_totals.append(concat_)
+
+        totals = new_totals            
+
+    if total in totals:
+        correct.append(total)
+
+pt2 = sum(correct)
+
+print("pt2:", pt2)
