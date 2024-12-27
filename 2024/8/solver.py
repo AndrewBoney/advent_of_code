@@ -47,7 +47,7 @@ for key, positions in all_positions.items():
             row, col = base_position[0] - compare_position[0], base_position[1] - compare_position[1]
 
             # number of diffs that fit in grid
-            # this is a bit lazy as it really just needs to be distance from point to size, but cba to implement
+            # this is a bit lazy as it really just needs to be distance from current point to edge, but cba to implement
             num_row_diffs = (rows - 1) // abs(row) 
             num_col_diffs = (cols - 1) // abs(col) 
 
